@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Fictional Landscape of Togetherness</title>
+        <script src="/js/build/three.min.js"></script>
+        <script src="/js/example-js/loaders/OBJLoader.js"></script>
+        <script src="/js/example-js/loaders/MTLLoader.js"></script>
+        <script src="/js/example-js/loaders/PLYLoader.js"></script>
+        <script src="/js/example-js/controls/OrbitControls.js"></script>
+        <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    </head>
+    <body>
+
+        <div class="scene-description">Scene 3</div>
+
+        <script src="/scripts/scene.js"></script>
+        <script>
+
+            var scene, camera, renderer;
+            var orbit;
+            var input = 5;
+            test(input);
+            console.log(input);
+            init();
+            animate();
+
+
+            var dirpath = "/assets/models/collage_3_Emma/"
+            var objpath = "emma_mesh_reduced.obj";
+            var mtlpath = "emma_mesh_reduced.mtl"
+            load_model(dirpath, objpath, mtlpath);
+        </script>
+
+    </body>
+</html>
