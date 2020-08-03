@@ -12,7 +12,7 @@
     <body>
 
         <div class="scene-description">Scene 2</div>
-        <div class="instructions">falling ......</div>
+
         <script src="/scripts/scene.js"></script>
         <script>
 
@@ -21,11 +21,11 @@
 
             var scene, camera, renderer;
 
-            var camera_height = 3;
+            var camera_height = 10;
             var collision_margin = 10;
-            var init_height = 200;
-            var gameover_height = -500;
-            var acceleration = 0.1;
+            var init_height = 10;
+            var gameover_height = -1000;
+            var acceleration = 0;
             var moving_speed = 1;
             var rotating_speed = 10*Math.PI/180;
             var velocity = 0;
@@ -34,9 +34,9 @@
             init();
             animate();
 
-            var dirpath = "/assets/models/collage_2_Aarti/"
-            var objpath = "butterfly_train_tracks_reduce.obj";
-            var mtlpath = "butterfly_train_tracks_reduce.mtl"
+            var dirpath = "/assets/models/"
+            var objpath = "simple_geo.obj";
+            var mtlpath = "simple_geo.mtl"
             load_model(dirpath, objpath, mtlpath);
             //explode("landscape");
         </script>

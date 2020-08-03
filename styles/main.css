@@ -17,3 +17,13 @@ canvas {
     background-color: rgba(255,255,255,0.5);
     padding: 20px;
 }
+
+.instructions{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: translate(-50%, -50%);
+    z-index: 10;
+    display:block;
+    color: white;
+}

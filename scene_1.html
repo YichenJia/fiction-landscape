@@ -12,6 +12,7 @@
     <body>
 
         <div class="scene-description">Scene 1</div>
+        <div class="instructions">falling ......</div>
         <audio id="my_audio" src="/assets/models/collage_1_Chucho/Kenyi.wav" loop="loop"></audio>
         <script src="/scripts/scene.js"></script>
         <script>
@@ -23,11 +24,22 @@
             // import {MTLLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/loaders/MTLLoader.js';
             // import {MtlObjBridge} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/loaders/obj2/bridge/MtlObjBridge.js';
 
+            window.walk = true;
+            window.explodable = true;
+            window.isFinishedLoading = false;
+
             var scene, camera, renderer;
+
+            var camera_height = 10;
+            var collision_margin = 10;
+            var init_height = 100;
+            var gameover_height = -500;
+            var acceleration = 0.1;
+            var moving_speed = 1;
+            var rotating_speed = 10*Math.PI/180;
+            var velocity = 0;
             var orbit;
-            var input = 5;
-            test(input);
-            console.log(input);
+
             init();
             animate();
 

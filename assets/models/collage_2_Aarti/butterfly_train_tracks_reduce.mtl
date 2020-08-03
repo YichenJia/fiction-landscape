@@ -14,7 +14,7 @@ Ks 0.0000 0.0000 0.0000
 Tf 0.0000 0.0000 0.0000
 d 1.0000
 Ns 0.0000
-map_Kd butterfly_train_tracks.mtl
+map_Kd butterfly_train_tracks_reduce.mtl
 newmtl Material_0.014
 Ka 1.0000 1.0000 1.0000
 Kd 1.0000 1.0000 1.0000
@@ -22,7 +22,7 @@ Ks 0.0000 0.0000 0.0000
 Tf 0.0000 0.0000 0.0000
 d 1.0000
 Ns 0.0000
-map_Kd butterfly_train_tracks.mtl
+map_Kd butterfly_train_tracks_reduce.mtl
 newmtl Material_0.012
 Ka 1.0000 1.0000 1.0000
 Kd 1.0000 1.0000 1.0000
@@ -30,7 +30,7 @@ Ks 0.0000 0.0000 0.0000
 Tf 0.0000 0.0000 0.0000
 d 1.0000
 Ns 0.0000
-map_Kd butterfly_train_tracks.mtl
+map_Kd butterfly_train_tracks_reduce.mtl
 newmtl Material_0.013
 Ka 1.0000 1.0000 1.0000
 Kd 1.0000 1.0000 1.0000
@@ -38,7 +38,7 @@ Ks 0.0000 0.0000 0.0000
 Tf 0.0000 0.0000 0.0000
 d 1.0000
 Ns 0.0000
-map_Kd butterfly_train_tracks.mtl
+map_Kd butterfly_train_tracks_reduce.mtl
 newmtl Material_0.016
 Ka 1.0000 1.0000 1.0000
 Kd 1.0000 1.0000 1.0000
@@ -46,7 +46,7 @@ Ks 0.0000 0.0000 0.0000
 Tf 0.0000 0.0000 0.0000
 d 1.0000
 Ns 0.0000
-map_Kd butterfly_train_tracks.mtl
+map_Kd butterfly_train_tracks_reduce.mtl
 newmtl Material_0.003
 Ka 1.0000 1.0000 1.0000
 Kd 1.0000 1.0000 1.0000
@@ -70,4 +70,4 @@ Ks 0.0000 0.0000 0.0000
 Tf 0.0000 0.0000 0.0000
 d 1.0000
 Ns 0.0000
-map_Kd butterfly_train_tracks.mtl
+map_Kd butterfly_train_tracks_reduce.mtl
