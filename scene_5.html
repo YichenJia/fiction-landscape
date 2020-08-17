@@ -15,19 +15,13 @@
         <div class="instructions">falling ......</div>
         <script src="/scripts/scene.js"></script>
         <script>
-            // import * as THREE from '/js/build/three.module.js';
-            // import {MtlObjBridge} from "/js/example-js/loaders/MtlObjBridge.js";
-            // import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/build/three.module.js';
-            // import {OrbitControls} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/controls/OrbitControls.js';
-            // import {OBJLoader2} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/loaders/OBJLoader2.js';
-            // import {MTLLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/loaders/MTLLoader.js';
-            // import {MtlObjBridge} from 'https://threejsfundamentals.org/threejs/resources/threejs/r115/examples/jsm/loaders/obj2/bridge/MtlObjBridge.js';
-
             var scene, camera, renderer;
             var orbit;
 
             window.walk = true;
             window.isFinishedLoading = false;
+            window.sceneIndex=5;
+            window.pointCloud = true;
 
             var scene, camera, renderer;
 
@@ -42,7 +36,9 @@
 
             init();
             animate();
-            load_point_cloud('/assets/models/collage_3_Emma/Emma_Pointcloud.ply');
+            record();
+
+            load_point_cloud('/assets/models/emma_pointcloud.ply');
         </script>
 
     </body>

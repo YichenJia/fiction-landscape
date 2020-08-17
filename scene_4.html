@@ -28,6 +28,8 @@
 
             window.walk = true;
             window.isFinishedLoading = false;
+            window.sceneIndex=4;
+            window.pointCloud = true;
 
             var scene, camera, renderer;
 
@@ -42,6 +44,8 @@
 
             init();
             animate();
+            record();
+
             load_point_cloud('/assets/models/test_2.ply');
         </script>
 

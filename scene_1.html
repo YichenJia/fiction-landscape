@@ -7,6 +7,12 @@
         <script src="/js/example-js/loaders/MTLLoader.js"></script>
         <script src="/js/example-js/loaders/PLYLoader.js"></script>
         <script src="/js/example-js/controls/OrbitControls.js"></script>
+
+        <script src="/js/example-js/lines/LineSegmentsGeometry.js"></script>
+        <script src="/js/example-js/lines/LineSegments2.js"></script>
+        <script src="/js/example-js/lines/Line2.js"></script>
+        <script src="/js/example-js/lines/LineGeometry.js"></script>
+        <script src="/js/example-js/lines/LineMaterial.js"></script>
         <link rel="stylesheet" type="text/css" href="/styles/main.css">
     </head>
     <body>
@@ -27,12 +33,14 @@
             window.walk = true;
             window.explodable = true;
             window.isFinishedLoading = false;
+            window.sceneIndex=1;
 
             var scene, camera, renderer;
+            var location_data=[];
 
             var camera_height = 10;
             var collision_margin = 10;
-            var init_height = 100;
+            var init_height = 400;
             var gameover_height = -500;
             var acceleration = 0.1;
             var moving_speed = 1;
@@ -42,6 +50,11 @@
 
             init();
             animate();
+            record();
+
+            // setInterval(function(){ //load new trace every 30 sec
+            //     loadTrace(1);
+            // },10000);
 
             var dirpath = "/assets/models/collage_1_Chucho/"
             var objpath = "model1_anima22_reduce.obj";
@@ -50,7 +63,7 @@
             var color = new THREE.Color( 'yellow' );
             draw_sphere(new THREE.Vector3(0,0,-10), color);
             //load_point_cloud();
-            console.log("camera", camera.position);
+            //console.log("camera", camera.position);
             // var audioObj = new Audio(dirpath+"Kenyi.wav");
             // audioobj.play();}
         </script>

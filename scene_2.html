@@ -18,6 +18,7 @@
 
             window.crawl = true;
             window.isFinishedLoading = false;
+            window.sceneIndex=2;
 
             var scene, camera, renderer;
 
@@ -33,6 +34,7 @@
 
             init();
             animate();
+            record();
 
             var dirpath = "/assets/models/collage_2_Aarti/"
             var objpath = "butterfly_train_tracks_reduce.obj";
