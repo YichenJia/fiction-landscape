@@ -6,6 +6,17 @@
 
 <?php
 echo "Hello World!";
+
+$m = new MongoClient();
+	
+echo "Connection to database successfully";
+
+// select a database
+$db = $m->trace;
+	
+echo $db;
+echo "Database trace selected";
+
 ?>
 
 </body>
