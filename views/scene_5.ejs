@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fictional Landscape</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script src="../libs/js/build/jquery-3.5.1.min.js"></script>
+
+    <script src="../libs/js/build/three.min.js"></script>
+    <script src="../libs/js/example-js/loaders/OBJLoader.js"></script>
+    <script src="../libs/js/example-js/loaders/MTLLoader.js"></script>
+    <script src="../libs/js/example-js/loaders/PLYLoader.js"></script>
+    <script src="../libs/js/example-js/controls/OrbitControls.js"></script>
+    <script src="../libs/js/example-js/controls/PointerLockControls.js"></script>
+
+    <script src="../libs/js/example-js/lines/LineSegmentsGeometry.js"></script>
+    <script src="../libs/js/example-js/lines/LineSegments2.js"></script>
+    <script src="../libs/js/example-js/lines/Line2.js"></script>
+    <script src="../libs/js/example-js/lines/LineGeometry.js"></script>
+    <script src="../libs/js/example-js/lines/LineMaterial.js"></script>
+  </head>
+  <body>
+<!--     <div class="scene-description">Scene 1</div> -->
+    <div class="instructions">
+      The Rights shall include without limitation all copyrights, neighboring rights, trademarks and any and all other ownership and exploitation rights in the Material now or hereafter recognized in any and all territories and jurisdictions including, by way of illustration, production, reproduction, distribution, adaptation, performance, fixation, rental and lending rights, exhibition, broadcast and all other rights of communication to the public and the right to exploit the Material throughout the universe in perpetuity in all media, markets and languages and in any manner now known or hereafter devised in connection with the Film and advance promotion thereof (and not in connection with any other production).<br/><br/>
+      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+  </body>
+</html>
+
+<script src="../javascripts/scene.js"></script>
+<script>
+  var db_paths = '<%- JSON.stringify(db_paths) %>';
+  var db_paths = JSON.parse(db_paths);
+  //console.log("db_paths", db_paths);
+
+  window.explodable = true;
+  window.jump = true;
+  window.isJumping = false;
+  window.isFinishedLoading = false;
+  window.sceneIndex=5;
+
+  var scene, camera, renderer;
+  var listener;
+  var controls;
+  
+  var trace_data=[];
+
+  var camera_height = 10;
+  var collision_margin = 10;
+  var init_height = 400;
+  var gameover_height = -500;
+  var acceleration = 0.1;
+  var moving_speed = 1;
+  var rotating_speed = 10*Math.PI/180;
+  var velocity = 0;
+  var orbit;
+
+  init();
+  animate();
+  record();
+  //loadTrace();
+
+  var dirpath = "/assets/models/collage 5_Pohao_TaiwanSceneMix1/"
+  var objpath = "demo.obj";
+  var mtlpath = "demo.mtl";
+  load_model(dirpath, objpath, mtlpath);
+
+  var play_on_load_positional_file = "/assets/audio/scene5/background.mp3";
+  var audiopos = {"x":0, "y":0, "z":0};
+  var audioradius = 100;
+
+</script>

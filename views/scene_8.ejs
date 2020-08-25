@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fictional Landscape</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script src="../libs/js/build/jquery-3.5.1.min.js"></script>
+
+    <script src="../libs/js/build/three.min.js"></script>
+    <script src="../libs/js/example-js/loaders/OBJLoader.js"></script>
+    <script src="../libs/js/example-js/loaders/MTLLoader.js"></script>
+    <script src="../libs/js/example-js/loaders/PLYLoader.js"></script>
+    <script src="../libs/js/example-js/controls/OrbitControls.js"></script>
+    <script src="../libs/js/example-js/controls/PointerLockControls.js"></script>
+
+    <script src="../libs/js/example-js/lines/LineSegmentsGeometry.js"></script>
+    <script src="../libs/js/example-js/lines/LineSegments2.js"></script>
+    <script src="../libs/js/example-js/lines/Line2.js"></script>
+    <script src="../libs/js/example-js/lines/LineGeometry.js"></script>
+    <script src="../libs/js/example-js/lines/LineMaterial.js"></script>
+  </head>
+  <body>
+<!--     <div class="scene-description">Scene 1</div> -->
+    <div class="instructions">
+      Multiply the point of contact, and expand the dimensions of the canvas with depth and time, sedimentate the process into palimpsest that communicates the layers of the relation between you and your subject.<br/><br/>
+      What is sent? What is meant?<br/><br/>
+      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+  </body>
+</html>
+
+<script src="../javascripts/scene.js"></script>
+<script>
+  var db_paths = '<%- JSON.stringify(db_paths) %>';
+  var db_paths = JSON.parse(db_paths);
+  //console.log("db_paths", db_paths);
+
+  window.explodable = true;
+  window.walk = true;
+  window.isFinishedLoading = false;
+  window.sceneIndex=8;
+
+  var scene, camera, renderer;
+  var controls;
+  
+  var location_data=[];
+
+  var camera_height = 10;
+  var collision_margin = 10;
+  var init_height = 400;
+  var gameover_height = -500;
+  var acceleration = 0.1;
+  var moving_speed = 1;
+  var rotating_speed = 10*Math.PI/180;
+  var velocity = 0;
+  var orbit;
+
+  init();
+  animate();
+  record();
+  //loadTrace();
+
+  var dirpath = "/assets/models/collage_8/"
+  var objpath = "towermodel.obj";
+  var mtlpath = "towermodel.mtl";
+  load_model(dirpath, objpath, mtlpath);
+</script>
